@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<style>
+    *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body{
+        font-family: century gothic;
+      }
+       /* Главная */
+      .nav_main {
+        margin-bottom: 10rem;
+        display: block;
+        font-family: century gothic;
+        background-color: #F5E3FD;
+        color: #000000;
+      }
+       /* Вход */
+      .nav_log_in {
+        margin-bottom: 10rem;
+        display: block;
+        font-family: century gothic;
+        background-color: #E2BDF0;
+        color: #000000;
+      }
+       /* Регистрация */
+      .nav_sign {
+        margin-bottom: 10rem;
+        display: block;
+        font-family: century gothic;
+        background-color: #D092E8;
+        color: #000000;
+      }
+      /* Главная_контейнер */
+      .nav_main_container {
+        margin-bottom: 3rem;
+        display: block;
+        font-family: century gothic;
+        background-color: #fff;
+        color: #000000;
+      }
+       /* Вход_контейнер */
+      .nav_log_in_container {
+        margin-bottom: 3rem;
+        display: block;
+        font-family: century gothic;
+        background-color: #fff;
+        color: #000000;
+      }
+       /* Регистрация_контейнер */
+      .nav_sign_container {
+        margin-bottom: 3rem;
+        display: block;
+        font-family: century gothic;
+        background-color: #fff;
+        color: #000000;
+      }
+    </style>
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block title %}Default title{% endblock title %}</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    </head>
+    <body class="text-center">
+        <header class="text-bg-dark">
+            <ul class="nav">
+                <li>
+                    <a href="/" class="nav_main col-lg-10">Главная</a>
+                    <a href="/log_in" type="button" class="nav_log_in col-lg-1">Вход</a>
+                    <a href="/registration" type="button" class="nav_sign col-lg-1">Регистрация</a>
+                    
+                </li>
+            </ul>
+        </header>
+        <div>{% block content%}{% endblock content %}</div>
+        <p class="text-center text-body-secondary">© 2023</p>
+    </body>
+</html>

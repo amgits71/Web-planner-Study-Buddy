@@ -1,0 +1,84 @@
+<!doctype html>
+{% extends "base.html" %}
+{% block title %}Вход{% endblock title %}
+{% block content%}
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+  <style>
+    *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body{
+        font-family: century gothic;
+      }
+/* установим отступ 1rem от нижнего края элемента */
+      .text-field {
+        margin-bottom: 10rem;
+        display: block;
+      }
+/* стили для label */
+      .text-field__label {
+        display: block;
+        margin-bottom: 0.1rem;
+      }
+/* стили для input */
+      .text-field__input {
+        width: 20%;
+        margin: 1rem;
+        height: calc(3.5rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #000000;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #bdbdbd;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+      /* стили для кнопки входа */
+      .button_log_in {
+        width: 7%;
+        margin: 5rem;
+        height: calc(3.5rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.5;
+        box-sizing: border-box;
+        color: #212529;
+        background-color: #ee93f1;
+        background-clip: padding-box;
+        border: 1px solid #bdbdbd;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="text-center"> <!-- Текст по центру -->
+    <main class="form-log_in">
+      <form action="/user/">
+        <!-- <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">  Логотип -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+        </svg>
+        <h1>Вход</h1>
+        <div class="text_field" > <!-- Email -->
+          <input type="email" class="text-field__input" id="floatingInput" placeholder="name@example.com" >
+          <label class="text-field__label">Email</label>
+        </div>
+        <div class="text_field"> <!-- Пароль -->
+          <input type="password" class="text-field__input" id="floatingPassword" placeholder="Пароль">
+          <label class="text-field__label">Пароль</label>
+        </div>
+        <!-- Войти -->
+        <button class="button_log_in" type="submit">Войти</button>
+      </form>
+    </main>
+  </body>
+</html>
+{% endblock content %}

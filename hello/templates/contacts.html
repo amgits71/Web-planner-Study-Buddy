@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block title %}Контакты{% endblock title %}
+{% block header %}Контакты{% endblock header %}
+  
+{% block content %}
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+  <style>
+    *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body{
+        font-family: century gothic;
+      }
+/* установим отступ 1rem от нижнего края элемента */
+      .text-field {
+        margin-bottom: 10rem;
+        display: block;
+      }
+/* стили для label */
+      .text-field__label {
+        display: block;
+        margin-bottom: 0.1rem;
+      }
+/* стили для input */
+      .text-field__input {
+        width: 20%;
+        margin: 1rem;
+        height: calc(3.5rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #bdbdbd;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="text-center"> <!-- Текст по центру -->
+    <main class="form-contacts">
+      <div class="container marketing">
+          <!-- Мы -->
+          <div class="row">
+            <div class="col-lg-6">
+              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Плейсхолдер" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+              </svg>
+              <h2>Микрюкова Яна Олеговна</h2>
+              <p>Описание Яны</p>
+            </div>
+
+            <div class="col-lg-6">
+              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Плейсхолдер" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+              </svg>
+              <h2>Романова Дарья Дмитриевна</h2>
+              <p>Описание Даши</p>
+            </div>
+          </div>
+
+
+          <!-- START THE FEATURETTES -->
+
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+            <div class="col-md-6">
+              <h2 class="featurette-heading fw-normal lh-1">Для кого? <span class="text-body-secondary">Зачем?</span></h2>
+              <p class="lead">Наша команда представляет приложение, которое поможет студентам более эффективно использовать свое время и при этом достигать своих учебных целей. Сегодня, в быстро меняющемся мире, студенты сталкиваются с многими вызовами, которые затрудняют процесс обучения. Мы разработали приложение для планирования дел, которое позволяет студентам управлять своим временем и оставаться организованными в любых условиях. Наше приложение поможет вам более эффективно использовать свое время и сделает ваше обучение более продуктивным и удобным. Присоединяйтесь к нашему сообществу и начинайте сегодня использовать наше приложение для планирования дел, чтобы достигнуть своих целей быстрее и проще.</p>
+            </div>
+            <div class="col-md-6">
+              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+          <div class="row featurette">
+            <div class="col-md-6">
+              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+            </div>
+            <div class="col-md-6">
+              <h2 class="featurette-heading fw-normal lh-1">Сложное в использовании? <span class="text-body-secondary">На что способно?</span></h2>
+              <p class="lead">Наше приложение использует простой и легкий в использовании интерфейс, который позволит вам быстро и эффективно управлять своим временем. Вы можете создавать список задач, установить приоритеты, добавить множество дедлайнов и графиков. С помощью нашего приложения вы можете легко следить за прогрессом выполнения задач и изменять свои планы по мере необходимости. Кроме того, наше приложение позволяет вам создавать список целей на определенный период времени, давая вам более четкое представление о том, чего вы хотите достичь и когда. Вы можете отслеживать свой прогресс и вносить изменения в свой план в зависимости от вашей текущей ситуации. </p>
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+            <div class="col-md-6">
+              <h2 class="featurette-heading fw-normal lh-1">Что будет в будущем?</h2>
+              <p class="lead">В нашем приложении у студентов появится возможность создавать учебный план и добавлять расписание занятий. Пользователи могут легко добавлять свои лекции, семинары и домашние задания к задачам на определенное время и держать все на одном месте. Мы знаем, что у студентов всегда есть много вопросов и проблем, связанных с их образованием, поэтому будет разработано сообщество, которое облегчит их жизнь. Пользователи могут общаться с другими студентами и делиться своими опытом и знаниями о том, как лучше организовать свое время и достигать своих целей. </p>
+            </div>
+            <div class="col-md-6">
+              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- /END THE FEATURETTES -->
+
+        </div>
+      <form>
+            <p>Телефон: +7-(900)-000-00-00</p>
+            <p>Email: admin@admin.com</p>
+      </form>
+    </main>
+  </body>
+</html>
+{% endblock content %}

@@ -1,0 +1,144 @@
+<!doctype html>
+{% extends "base.html" %}
+{% block title %}Регистрация{% endblock title %}
+{% block content%}
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+  <style>
+    *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body{
+        font-family: century gothic;
+      }
+/* установим отступ 1rem от нижнего края элемента */
+      .text-field {
+        margin-bottom: 10rem;
+        display: block;
+      }
+/* стили для label */
+      .text-field__label {
+        display: block;
+        margin-bottom: 0.1rem;
+      }
+/* стили для input */
+      .text-field__input {
+        width: 20%;
+        margin: 1rem;
+        height: calc(3.5rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #bdbdbd;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+/* стили для кнопки входа */
+      .button_log_in {
+        width: 17%;
+        margin: 5rem;
+        height: calc(3.5rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.5;
+        box-sizing: border-box;
+        color: #000000;
+        background-color: #ee93f1;
+        background-clip: padding-box;
+        border: 1px solid #bdbdbd;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="text-center"> <!-- Текст по центру -->
+    <main class="form-log_in">
+        <!---------------------------------------------------------------------------------------------------->
+      <form method="post" action="/user/">
+        {% csrf_token %}
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
+          <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+          <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
+        </svg>
+        <h1>Регистрация</h1>
+            <!-- Ник -->
+            <div class="text_field" >
+              <input type="Ник" class="text-field__input" id="floatingInput_Name" placeholder="Ance" >
+              <label class="text-field__label">Ник пользователя</label>
+            </div>
+            <!-- Email -->
+            <div class="text_field" >
+              <input type="email" class="text-field__input" id="floatingInput_Email" placeholder="name@example.com" >
+              <label class="text-field__label">Email</label>
+            </div>
+            <!-- Пароль -->
+            <div class="text_field">
+              <input type="password" class="text-field__input" id="floatingPassword" placeholder="Пароль">
+              <label class="text-field__label">Пароль</label>
+            </div>
+            <!-- Возраст -->
+            <div>
+                <select class="text-field__input" id="year" required="">
+                    <option value="">
+                      <h>Выбирай...</h>
+                    </option>
+                    {%for lan in years%}
+                      <option>
+                        {{lan}}
+                      </option>
+                    {% endfor %}
+                  </select>
+              <div class="text_field">
+                 <label class="text-field__label">Пожалуйста, выберите свой возраст</label>
+              </div>
+            </div>
+            <label> </label>
+            <!-- Пол -->
+            <div>
+                <div>
+                    <label> </label>
+                    <input id="sex_man" name="sex" type="radio">
+                    <label>Мужской</label>
+                    <input id="sex_woman" name="sex" type="radio">
+                    <label>Женский</label>
+                </div>
+                <div class="text_field">
+                 <label class="text-field__label">Пожалуйста, выберите свой пол</label>
+              </div>
+            </div>
+            <label> </label>
+            <label> </label>
+            <div>
+              <h3>Учитесь?</h3>
+                <div>
+                  <input id="learn_yes" name="learn" type="radio">
+                  <label>Да</label>
+                  <input id="learn_no" name="learn" type="radio">
+                  <label>Нет</label>
+                </div>
+            </div>
+            <label> </label>
+            <label> </label>
+            <div>
+              <h3>Работаете?</h3>
+                <div>
+                  <input id="work_yes" name="work" type="radio">
+                  <label><ya-tr-span>Да</ya-tr-span></label>
+                  <input id="work_no" name="work" type="radio">
+                  <label><ya-tr-span>Нет</ya-tr-span></label>
+                </div>
+            </div>
+          <button class="button_log_in">Зарегистрироваться</button>
+      </form>
+    </main>
+  </body>
+</html>
+{% endblock content %}
